@@ -28,7 +28,7 @@ useEffect(()=>{
     .then(data => {
         setData(data)
     })
-}, [])
+}, [data])
 
     return (
         <>
