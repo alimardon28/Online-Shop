@@ -1,17 +1,16 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/img/logo.svg'
 import '../Footer/Footer.css'
-import page from '../../localization/Content';
 import { Context } from '../../Context/langContext';
 
-const Footer = ({children}) => {
+const Footer = () => {
 
     const {lang , setLang} = useContext(Context);
 
 
     return (
-        <>
+        <div id='footer'>
 
           <footer className="footer">
               <div className="footer__box">
@@ -22,12 +21,12 @@ const Footer = ({children}) => {
                           </NavLink>
                       </li>
                       <li>
-                          <p>lorem</p>
-                          <p>lorem</p>
-                          <p>lorem</p>
+                          <p><NavLink id='favorites' to="/selected">Favorites</NavLink></p>
+                          <p><NavLink id='basket' to="/card">Basket</NavLink></p>
+                          <p><NavLink id='contacts' to="/cantacts">Contacts</NavLink></p>
                       </li>
                       <li>
-                          <p>loremm</p>
+                         <p> <NavLink className="nav" to="/servicesrequirements">Terms of service</NavLink></p>
                           <select defaultValue={lang} onChange={e => setLang(e.target.value)}>
                               <option value="uz">uz</option>
                               <option value="ru">ru</option>
@@ -42,10 +41,9 @@ const Footer = ({children}) => {
                       </li>
                   </ul>
               </div>
-           {page[lang].footer} {children}
           </footer>
 
-        </>
+        </div>
     );
 }
 

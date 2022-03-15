@@ -1,22 +1,29 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/img/logo.svg'
 import '../Components/Header.css'
+import { Context } from '../Context/langContext';
+import { useContext } from 'react';
 
 const Header = () => {
+
+    const  {product} = useContext(Context)
+    const {korzinka} = useContext(Context)
+
     return (
         <>
           <header className='header'>
               <nav className='nav'>
-                  <a className='nav-link' href="/">
+                  <NavLink className='nav-link'  to="/">
                       <img className='nav-logo' src={logo} alt="logo img" />
-                  </a>
+                  </NavLink>
 
                   <ul className='list'>
                       <li className='item'>
-                         <a className='item__link' href="/"><i className='bi bi-heart'></i><span>0</span></a>
+                         <NavLink to="/selected" className='item__link' href="/"><i className='bi bi-heart'></i><span>{product.length}</span></NavLink>
                       </li>
                       <li className='item'>
-                         <a className='item__link' href="/"><i className='bi bi-cart3'></i> <span>0</span></a>
+                         <NavLink to="/card" className='item__link' href="/"><i className='bi bi-cart3'></i> <span>{korzinka.length}</span></NavLink>
                       </li>
                   </ul>
               </nav>

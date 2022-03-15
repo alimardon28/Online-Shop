@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../Pages/All.css'
+import banner from '../assets/img/banner.png'
+import results from '../localization/Content';
+import { Context } from '../Context/langContext';
+import { useContext } from 'react';
+
 
 
 
@@ -8,25 +13,43 @@ import '../Pages/All.css'
 const Products = () => {
 
 const [data , setData] = useState();
+const { lang } = useContext(Context);
+
+const {product} = useContext(Context);
+const {products} = useContext(Context);
+
+
+
 
 useEffect(()=>{
-    fetch('http://localhost:3005/posts')
+    fetch('http://localhost:3001/posts')
     .then(res => res.json())
     .then(data => {
         setData(data);
     })
 }, [])
 
+const handleAdd = (e) => {
+
+    products?.map(item =>{
+      if(item.id == e.target.id){
+         product.push(item)
+      }
+    })
+}
+
     return (
         <>
-
-        <ul className='products__list ' >
+          <div id="banner__box">
+              <img src={banner} alt="banner img" />
+          </div>
+         <ul className='products__list'>
           {
             data?.map(p =>{
                 return(
                     <li className='products__item' key={p.id}>
+                        <button id='heartsbox' onClick={(e) => handleAdd(e)}><i id={p.id} className='bi bi-heart yurak'></i></button>
                         <NavLink className="navlink" to={`/singleproducts/${p.id}`}>
-                        <i className='bi bi-heart yurak'></i>
                         <img className='products__img' src={p.url} alt="img" />
                         <div className="products__box">
                             <div className="products__element">

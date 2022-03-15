@@ -1,25 +1,58 @@
+#footer{
+    margin: 0;
+    padding:0 40px;
+    flex-grow: 1;
+}
+
 .footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    margin: 0;
+    padding:29px;
+    background-color: #fff;
+    border-radius: 40px 40px 0px 0px;
 }
 
 .footer__box{
     margin: 0;
-    padding: 10px;
-    display: flex;
+    padding:0;
     align-items: center;
     justify-content: space-between;
 }
 
 .footer__box ul{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     list-style: none;
 }
 
 .footer__box ul li{
     margin: 0;
+}
+.footer__box ul li p .nav{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.footer__box ul span{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer__box ul span .bi{
+   font-size: 28px;
+}
+
+.footer__box ul li p #contacts{
+    text-decoration: none;
+    color: #000;
+}
+
+.footer__box ul li p #basket{
+   text-decoration: none;
+   color: #000;
+}
+
+.footer__box ul li p #favorites{
+    text-decoration: none;
+    color: #000;
 }

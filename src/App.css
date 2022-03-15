@@ -1,7 +1,14 @@
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body{
   background-color: #EAEAEA;
+}
+
+main{
+  flex-grow: 1;
 }
