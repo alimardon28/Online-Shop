@@ -19,7 +19,8 @@ const results = {
               h1:"Xizmat ko'rsatish shartlari",
               p13:"Tashkilotning vazifasi, xususan, ijtimoiy yo'naltirilgan milliy loyiha yo'nalishi bizdan rivojlanish modelini tizimli ravishda tahlil qilishni talab qiladi! Shunday qilib, faoliyatimizni doimiy axborot va texnik jihatdan qo'llab-quvvatlash bizdan bir qator parametrlardagi keng ko'lamli o'zgarishlar tizimini tahlil qilishni talab qiladi! Boshqa tomondan, ijtimoiy-iqtisodiy rivojlanish to'g'ridan-to'g'ri har tomonlama muvozanatli innovatsiyalarga bog'liqmi?",
               h2:"Yetkazib berish shartlari",
-              h3:"Qaytish shartlari"
+              h3:"Qaytish shartlari",
+              
 
             }
          },

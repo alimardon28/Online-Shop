@@ -14,12 +14,12 @@ const ServiceRequirements = () => {
                     <p>{results[lang].content.p13}</p>
                 </div>
                 <div className="service">
-                   <h3>{results[lang].content.p13}</h3>
-                    <p>The task of the organization, in particular the course towards a socially oriented national project, requires us to systematically analyze the development model! Thus, the constant information and technical support of our activities requires us to analyze the system of large-scale changes in a number of parameters! On the other hand, socio-economic development directly depends on comprehensively balanced innovations?</p>
+                   <h3>{results[lang].content.h2}</h3>
+                    <p>{results[lang].content.p13}</p>
                 </div>
                 <div className="service">
-                    <h3>{results[lang].content.p13}</h3>
-                    <p>The task of the organization, in particular the course towards a socially oriented national project, requires us to systematically analyze the development model! Thus, the constant information and technical support of our activities requires us to analyze the system of large-scale changes in a number of parameters! On the other hand, socio-economic development directly depends on comprehensively balanced innovations?</p>
+                    <h3>{results[lang].content.h3}</h3>
+                    <p>{results[lang].content.p13}</p>
                 </div>
             </div>
 
