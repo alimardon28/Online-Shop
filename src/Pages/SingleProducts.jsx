@@ -1,6 +1,6 @@
 import React , { useEffect, useState, useContext } from 'react';
 import { Context } from '../Context/langContext';
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 
 
@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const Singleproducts = () => {
 
-//  const {userId} = useParams()
+ const {userId} = useParams()
 
 const [data , setData] = useState({});
 const {korzinka} = useContext(Context)
@@ -23,7 +23,7 @@ const addKorzinka = (id) => {
 }
 
 useEffect(()=>{
-    fetch('https://authentiication.herokuapp.com/posts')
+    fetch(`https://authentiication.herokuapp.com/posts/${userId}`)
     .then(res => res.json())
     .then(data => {
         setData(data)
