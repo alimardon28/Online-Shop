@@ -12,7 +12,7 @@ function Provider ({children}){
     const [lang , setLang] = useState(window.localStorage.getItem('lang') || 'uz')
 
     useEffect(()=>{
-        fetch('http://localhost:3001/posts')
+        fetch('https://authentiication.herokuapp.com/posts')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])

@@ -47,7 +47,7 @@ const hanlePlus = (e) => {
 const hanleMinus = (e) => {
     let id = e.target.id
     korzinka?.map(element => {
-        if(element.id === id){
+        if(element.id == id){
             element.didmount = element.didmount -1
             window.localStorage.setItem("products" , JSON.stringify(products))
             if(element.products){

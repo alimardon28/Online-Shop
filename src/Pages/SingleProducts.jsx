@@ -1,6 +1,6 @@
 import React , { useEffect, useState, useContext } from 'react';
 import { Context } from '../Context/langContext';
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -8,7 +8,7 @@ import { NavLink, useParams } from "react-router-dom";
 
 const Singleproducts = () => {
 
- const {userId} = useParams()
+//  const {userId} = useParams()
 
 const [data , setData] = useState({});
 const {korzinka} = useContext(Context)
@@ -23,12 +23,12 @@ const addKorzinka = (id) => {
 }
 
 useEffect(()=>{
-    fetch(`http://localhost:3001/posts/${userId}`)
+    fetch('https://authentiication.herokuapp.com/posts')
     .then(res => res.json())
     .then(data => {
         setData(data)
     })
-}, [data])
+}, [])
 
     return (
         <>
@@ -49,7 +49,7 @@ useEffect(()=>{
                    <p className='desc__box-desc description'>{data?.description}</p>
                 </div>
                 <div className="button__group">
-                    <NavLink to={`/card/${data.id}`} className='buy'>Buy !</NavLink>
+                    <NavLink to={`/card`} className='buy'>Buy !</NavLink>
                     <button id={data.id} onClick={(e) => addKorzinka(e.target.id)} className='card'> <i className='bi bi-cart3'></i>Add to Cart</button>
                 </div>
             </div>
