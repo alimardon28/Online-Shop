@@ -1,14 +1,14 @@
 import React , { useEffect, useState, useContext } from 'react';
 import { Context } from '../Context/langContext';
 import { NavLink, useParams } from "react-router-dom";
-
+import results from '../localization/Content';
 
 
 
 
 const Singleproducts = () => {
-
- const {userId} = useParams()
+const {lang} = useContext(Context);
+const {userId} = useParams()
 
 const [data , setData] = useState({});
 const {korzinka} = useContext(Context)
@@ -45,12 +45,12 @@ useEffect(()=>{
                 </div>
             <div className="desc__box">
                 <div className="desc__boxDesc">
-                   <h2 className='desc__box-heading'>Additional Information</h2>
+                   <h2 className='desc__box-heading'>{results[lang].content.p10}</h2>
                    <p className='desc__box-desc description'>{data?.description}</p>
                 </div>
                 <div className="button__group">
-                    <NavLink to={`/card`} className='buy'>Buy !</NavLink>
-                    <button id={data.id} onClick={(e) => addKorzinka(e.target.id)} className='card'> <i className='bi bi-cart3'></i>Add to Cart</button>
+                    <NavLink to={`/card`} className='buy'>{results[lang].content.p12}!</NavLink>
+                    <button id={data.id} onClick={(e) => addKorzinka(e.target.id)} className='card'> <i className='bi bi-cart3'></i>{results[lang].content.p11}</button>
                 </div>
             </div>
           </div>

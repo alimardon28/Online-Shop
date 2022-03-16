@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../Pages/All.css'
 import banner from '../assets/img/banner.png'
-// import results from '../localization/Content';
 import { Context } from '../Context/langContext';
 import { useContext } from 'react';
 
@@ -13,8 +12,6 @@ import { useContext } from 'react';
 const Products = () => {
 
 const [data , setData] = useState();
-// const { lang } = useContext(Context);
-
 const {product} = useContext(Context);
 const {products} = useContext(Context);
 

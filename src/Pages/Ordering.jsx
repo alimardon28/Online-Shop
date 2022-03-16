@@ -99,12 +99,12 @@ const Ordering = () => {
 
                         </div>
                         <div id="nomer">
-                             <h2>Qabul qiluvchining raqami</h2>
+                             <h2>Recipient number</h2>
                              <input type="number" required placeholder='+ 1 __ __ __' />
                         </div>
 
                         <div id="button-div">
-                             <NavLink id='btn' to="/ordered">Tozalashni tugatish</NavLink>
+                             <NavLink id='btn' to="/ordered">Finish cleaning</NavLink>
                         </div>
                     </div>
             </div>

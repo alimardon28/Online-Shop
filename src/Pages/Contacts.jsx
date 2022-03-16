@@ -1,11 +1,16 @@
 import React from 'react';
+import { useContext } from 'react';
+import { Context } from '../Context/langContext';
+import results from '../localization/Content';
 
 const Contacts = () => {
+    const {lang} = useContext(Context);
+
     return (
         <div id='contac'>
           <div id="contact">
               <div className="contact_box">
-                  <h3>Our office</h3>
+                  <h3>{results[lang].content.p}</h3>
               <p id='lokation'>
                  <iframe
                  title='location'
@@ -20,7 +25,7 @@ const Contacts = () => {
 
                     />
                 </p>
-                <p id='iframe'><i className="bi bi-geo-alt"></i>Najot Ta'lim, Olmazor street, 72A Tashkent Kichik halqa yo'li</p>
+                <p id='iframe'><i className="bi bi-geo-alt"></i>{results[lang].content.p1}</p>
               </div>
               <div className="contacts_link">
                    <span id='span-icons'><i className="bi bi-whatsapp"></i></span>
@@ -30,7 +35,7 @@ const Contacts = () => {
               </div>
           </div>
           <div className="number">
-              <h2><i className="bi bi-telephone-fill"></i>+7 777 777 77 77</h2>
+              <h2><i className="bi bi-telephone-fill"></i>+998 97 777 77 77</h2>
           </div>
 
 

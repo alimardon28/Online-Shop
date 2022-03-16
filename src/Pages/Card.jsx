@@ -1,9 +1,12 @@
 import { NavLink  } from 'react-router-dom';
-import { Context } from '../Context/langContext';
 import { useContext } from 'react';
+import { Context } from '../Context/langContext';
+import results from '../localization/Content';
 
 
 const Card = () => {
+    const {lang} = useContext(Context);
+
 
     const {products, setProducts} = useContext(Context);
     const {korzinka, setKorzinka} = useContext(Context)
@@ -62,7 +65,7 @@ const hanleMinus = (e) => {
 }
     return (
         <div id='card'>
-           <h1 className='card__heading'>Savat</h1>
+           <h1 className='card__heading'>{results[lang].content.p8}</h1>
 
            <ul className='products__list' id='products__list'>
 
@@ -112,7 +115,7 @@ const hanleMinus = (e) => {
                                 </div>
                                 <div id="delivery__result">
                                     <p id='tuck'><i className="bi bi-truck"></i></p>
-                                    <p id='kuryer'>Kuryer orqali yetkazib berish</p>
+                                    <p id='kuryer'>{results[lang].content.p2}</p>
                                     <p id='price'>499 ₸</p>
                                 </div>
                            </div>
@@ -121,11 +124,11 @@ const hanleMinus = (e) => {
                 </ul>
            <div id="itogo">
                <div className="itogo">
-                    <p id='itogo__desc'>JAMI</p>
+                    <p id='itogo__desc'>{results[lang].content.p4}</p>
                     <p id='itogo-price'>{counterMoney}</p>
                </div>
                <div id="itogo__btn">
-                   <NavLink to="/ordering" id='btn-itogo'>Hisob-kitobga o'ting</NavLink>
+                   <NavLink to="/ordering" id='btn-itogo'>{results[lang].content.p3}</NavLink>
                </div>
            </div>
     </div>

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/img/logo.svg'
 import '../Footer/Footer.css'
 import { Context } from '../../Context/langContext';
+import results from '../../localization/Content';
 
 const Footer = () => {
 
@@ -21,9 +22,9 @@ const Footer = () => {
                           </NavLink>
                       </li>
                       <li>
-                          <p><NavLink id='favorites' to="/selected">Favorites</NavLink></p>
-                          <p><NavLink id='basket' to="/card">Basket</NavLink></p>
-                          <p><NavLink id='contacts' to="/cantacts">Contacts</NavLink></p>
+                          <p><NavLink id='favorites' to="/selected">{results[lang].content.p7}</NavLink></p>
+                          <p><NavLink id='basket' to="/card">{results[lang].content.p8}</NavLink></p>
+                          <p><NavLink id='contacts' to="/cantacts">{results[lang].content.p9}</NavLink></p>
                       </li>
                       <li>
                          <p> <NavLink className="nav" to="/servicesrequirements">Terms of service</NavLink></p>
