@@ -1,4 +1,3 @@
-import React , {  useState } from 'react';
 import { NavLink  } from 'react-router-dom';
 import { Context } from '../Context/langContext';
 import { useContext } from 'react';
@@ -14,6 +13,7 @@ let myProduct = []
    korzinka?.map(item => {
     let moneyProduct = item.sum
     myProduct.push(Number(moneyProduct))})
+
 let counterMoney = ""
 if(korzinka.length > 0) {
      counterMoney = myProduct?.reduce(function(item, index) {
@@ -30,7 +30,7 @@ const handleDelete = (id) =>{
 const hanlePlus = (e) => {
     let id = e.target.id
     korzinka?.map(element => {
-        if(element.id == id){
+        if(element.id === id){
             element.didmount = element.didmount +1
             window.localStorage.setItem("products" , JSON.stringify(products))
             if(element.addSaved){
@@ -47,7 +47,7 @@ const hanlePlus = (e) => {
 const hanleMinus = (e) => {
     let id = e.target.id
     korzinka?.map(element => {
-        if(element.id == id){
+        if(element.id === id){
             element.didmount = element.didmount -1
             window.localStorage.setItem("products" , JSON.stringify(products))
             if(element.products){
@@ -99,6 +99,7 @@ const hanleMinus = (e) => {
                                 <div className="location__box">
                                     <p id='lokation'>
                                     <iframe
+                                        className='lacationIframe'
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191885.2529861742!2d69.2793667!3d41.28259745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQsNGI0LrQtdC90YI!5e0!3m2!1sru!2s!4v1647259376526!5m2!1sru!2s"
                                         width="585"
                                         height="183"
