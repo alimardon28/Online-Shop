@@ -32,7 +32,7 @@ useEffect(()=>{
 const handleAdd = (e) => {
 
     products?.map(item =>{
-      if(item.id === e.target.id){
+      if(item.id == e.target.id){
          product.push(item)
       }
     })

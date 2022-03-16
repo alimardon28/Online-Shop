@@ -29,17 +29,17 @@ const handleDelete = (id) =>{
 
 const hanlePlus = (e) => {
     let id = e.target.id
-    korzinka?.map(element => {
-        if(element.id === id){
-            element.didmount = element.didmount +1
+    korzinka?.map(item => {
+        if(item.id == id){
+            item.didmount = item.didmount +1
             window.localStorage.setItem("products" , JSON.stringify(products))
-            if(element.addSaved){
-                setProducts(state => [...state , element])
+            if(item.addSaved){
+                setProducts(state => [...state , item])
                 window.localStorage.setItem('products' , JSON.stringify(products))
             }
 
         }else{
-            setKorzinka(state => state.filter(item => item.id !== element.id))
+            setKorzinka(state => state.filter(item => item.id !== item.id))
         }
     })
 }
