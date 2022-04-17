@@ -6,17 +6,11 @@ import { Context } from '../Context/langContext';
 import { useContext } from 'react';
 
 
-
-
-
 const Products = () => {
 
 const [data , setData] = useState();
 const {product} = useContext(Context);
 const {products} = useContext(Context);
-
-
-
 
 useEffect(()=>{
     fetch('https://authentiication.herokuapp.com/posts')

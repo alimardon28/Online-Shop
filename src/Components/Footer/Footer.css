@@ -8,6 +8,7 @@
     padding:29px;
     background-color: #fff;
     border-radius: 40px 40px 0px 0px;
+
 }
 
 .footer__box{
@@ -15,11 +16,13 @@
     padding:0;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer__box ul{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -54,4 +57,120 @@
 .footer__box ul li p #favorites{
     text-decoration: none;
     color: #000;
+}
+
+
+@media screen and (max-width:700px){
+    .results{
+        padding:30px !important;
+    }
+   .desc__boxDesc{
+       width: 80% !important;
+       margin-right: 0 !important;
+   }
+
+   .desc__boxDesc .desc__box-desc{
+      font-size: 20px;
+   }
+   #footer{
+       padding: 0px 20px;
+   }
+}
+
+
+@media screen and (max-width:970px){
+    .imges__box{
+        width: 100%;
+    }
+   .imges__box img{
+       width: 300px !important;
+       height: 100% !important;
+   }
+   .desc__boxDesc{
+       width: 80% !important;
+   }
+
+   .desc__boxDesc .desc__box-desc{
+      font-size: 20px;
+   }
+}
+
+@media screen and (max-width:900px){
+    .products__item{
+        width: 287px !important;
+        height: 380px !important;
+    }
+}
+@media screen and (max-width:660px){
+    .imges__box img{
+        width: 280px !important;
+        height: 100% !important;
+        text-align: center !important;
+    }
+
+    .buy{
+        width: 200px !important;
+    }
+
+    .card{
+        width: 200px !important;
+    }
+}
+
+@media screen and (max-width:480px){
+    .header{
+        padding: 15px 20px !important;
+    }
+    .products__item{
+        width: 287px;
+        height: 380px;
+    }
+
+    .products__list{
+        padding: 44px 20px !important;
+    }
+
+    #footer{
+        padding:0px 20px ;
+    }
+    .footer__box ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .footer__box ul li select{
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .imges__box{
+        width: 82%;
+    }
+    .results{
+        padding:15px 20px !important;
+    }
+    .desc__boxDesc .desc__box-desc{
+        font-size: 14px;
+     }
+
+    .desc__boxDesc{
+        width: 90% !important;
+    }
+
+    .button__group{
+        padding: 4px 10px !important;
+    }
+    .buy{
+        width: 150px !important;
+    }
+
+    .card{
+        width: 150px !important;
+    }
 }

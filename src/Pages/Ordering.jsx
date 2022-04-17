@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import victor from '../assets/img/Vector.svg'
+// import victor from '../assets/img/Vector.svg'
 import victor1 from '../assets/img/Vector1.svg'
 import { Context } from '../Context/langContext';
 import { useContext } from 'react';
 
 const Ordering = () => {
     const {korzinka} = useContext(Context);
+    console.log(korzinka);
 
     let myProduct = []
 
@@ -86,7 +87,7 @@ const Ordering = () => {
                         <div id="oplate">
                             <h2>Payment method</h2>
                             <div id="selected-bar">
-                                <img src={victor} alt="vector img" />
+                                <img src='{victor}' alt="vector img" />
                                 <select id="selected">
                                    <option value="">Account on kaspi.kz</option>
                                    <option value="">hr@nmpc.uz</option>

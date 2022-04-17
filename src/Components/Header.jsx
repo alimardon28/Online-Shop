@@ -20,7 +20,7 @@ const Header = () => {
 
                   <ul className='list'>
                       <li className='item'>
-                         <NavLink to="/selected" className='item__link' href="/"><i className='bi bi-heart'></i><span>{product.length}</span></NavLink>
+                         <NavLink to="/selected"  className='item__link' href="/"><i className='bi bi-heart'></i><span>{product.length}</span></NavLink>
                       </li>
                       <li className='item'>
                          <NavLink to="/card" className='item__link' href="/"><i className='bi bi-cart3'></i> <span>{korzinka.length}</span></NavLink>
